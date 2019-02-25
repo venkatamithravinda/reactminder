@@ -10,6 +10,7 @@ class Reminder extends Component {
                 <header>
                     <nav>
                         <ul>
+                            <h1>QA Branch in Git</h1>
                             <li><NavLink to= "/normal-tasks">NormalTasks</NavLink></li>
                             <li><NavLink to = "/timer-tasks">TimerTasks</NavLink></li>
                         </ul>

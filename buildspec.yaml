@@ -2,19 +2,20 @@ version: 0.2
 phases:
  install:
    commands:
-     - echo "install step"
+     - echo Installing source NPM dependencies...
+     - npm install
  pre_build:
    commands:
      - echo "pre_build step"
  build:
    commands:
-     - aws s3 sync --delete . "s3://www.reactminder.com"
+     - echo Build started on `date`
+     - npm run build
  post_build:
    commands:
-     - echo "post_build step"
- # build:
- #   commands:
- #    - npm build
- # post_build:
- #   commands:
- #    - aws s3 sync --delete . "s3://<your-static-website-bucket>"
+     # copy the contents of /build to S3
+     - aws s3 cp --recursive --acl public-read ./build s3://www.reactminder.com/
+      # invalidate the CloudFront cache for index.html and service-worker.js
+      # to force CloudFront to update its edge locations with the new versions
+     # - aws cloudfront create-invalidation --distribution-id ${Distribution}
+     #    --paths /index.html /service-worker.js
