@@ -9,17 +9,8 @@ phases:
      - echo "pre_build step"
  build:
    commands:
-<<<<<<< HEAD
      - echo Build started on `date`
      - npm run build
-=======
-<<<<<<< HEAD
-     - echo Build started on `date`
-     - npm run build
-=======
-     - aws s3 sync --delete . "s3://www.reactminder.com"
->>>>>>> 9b87522c58015c845aab140873978ab96d7249a1
->>>>>>> ca1c25d552842a6c3abfa5031b22a36d59a9584e
  post_build:
    commands:
      # copy the contents of /build to S3
