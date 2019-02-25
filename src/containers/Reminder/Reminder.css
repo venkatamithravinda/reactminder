@@ -1,0 +1,24 @@
+.Reminder ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.Reminder li {
+    display: inline-block;
+    margin: 20px;
+}
+
+.Reminder a{
+    text-decoration: none;
+    color: black;
+}
+
+.Reminder a:hover,
+.Reminder a:active,
+.Reminder a.active {
+    color: #fa923f;
+}
+

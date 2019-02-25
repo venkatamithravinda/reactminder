@@ -1,0 +1,7 @@
+.Task{
+    text-align: left;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    margin: 15px 15px;
+}   
