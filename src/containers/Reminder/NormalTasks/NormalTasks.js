@@ -66,7 +66,7 @@ class NormalTasks extends Component{
     }
 
     render() {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-        let task =  <h1>No Tasks to Show</h1>;
+        let task =  <h1>No Tasks to Show-change</h1>;
          if(this.state.NormalTasks){
             task = Object.keys(this.state.NormalTasks).map((task) => {
                 const eachTask = this.state.NormalTasks;
